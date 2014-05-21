@@ -345,5 +345,3 @@ LOCAL_SRC_FILES := \
     src/fxge/ge/fx_ge_text.cpp \
 
 include $(BUILD_STATIC_LIBRARY)
-
-
