@@ -152,7 +152,7 @@ void opj_mct_decode_real(
 #ifdef __SSE__
 	// Mantis BUGID: 0056291. The address must be 16-byte aligned.
 	// TestFile: fuzz-signal_sigsegv_6e9e7f_5076_5265.pdf
-	if ((OPJ_UINT32)c0 % 16 == 0 && (OPJ_UINT32)c1 % 16 == 0 && (OPJ_UINT32)c2 % 16 == 0){
+	if ((uintptr_t)c0 % 16 == 0 && (uintptr_t)c1 % 16 == 0 && (uintptr_t)c2 % 16 == 0){
 		__m128 vrv, vgu, vgv, vbu;
 		vrv = _mm_set1_ps(1.402f);
 		vgu = _mm_set1_ps(0.34413f);
