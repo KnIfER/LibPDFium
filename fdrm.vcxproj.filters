@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fdrm">
+      <UniqueIdentifier>{4EDD0C9B-0F0F-2E80-3EDF-750EDE084315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fdrm">
+      <UniqueIdentifier>{4EDD0C9B-0F0F-2E80-3EDF-750EDE084315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fdrm\crypto">
+      <UniqueIdentifier>{DFFB1441-5E91-CEAB-DBC4-604225CE8161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fdrm">
+      <UniqueIdentifier>{4EDD0C9B-0F0F-2E80-3EDF-750EDE084315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fdrm\crypto">
+      <UniqueIdentifier>{DFFB1441-5E91-CEAB-DBC4-604225CE8161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fdrm">
+      <UniqueIdentifier>{4EDD0C9B-0F0F-2E80-3EDF-750EDE084315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fdrm\crypto">
+      <UniqueIdentifier>{DFFB1441-5E91-CEAB-DBC4-604225CE8161}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\include\fdrm\fx_crypt.h">
+      <Filter>core\include\fdrm</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fdrm\crypto\fx_crypt.cpp">
+      <Filter>core\src\fdrm\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fdrm\crypto\fx_crypt_aes.cpp">
+      <Filter>core\src\fdrm\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fdrm\crypto\fx_crypt_sha.cpp">
+      <Filter>core\src\fdrm\crypto</Filter>
+    </ClCompile>
+    <None Include="pdfium.gyp"/>
+  </ItemGroup>
+</Project>

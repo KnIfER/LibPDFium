@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{590475D1-818B-8057-4555-32C838078CB2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>xfa</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\v8\third_party\cygwin\bin\;$(MSBuildProjectDirectory)\v8\third_party\python_26\</ExecutablePath>
+    <OutDir>build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)lib\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4505;4510;4512;4610;4838;4995;4996;4456;4457;4458;4459;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>PDF_ENABLE_XFA;V8_DEPRECATION_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PDF_ENABLE_XFA;V8_DEPRECATION_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4505;4510;4512;4610;4838;4995;4996;4456;4457;4458;4459;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>PDF_ENABLE_XFA;V8_DEPRECATION_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PDF_ENABLE_XFA;V8_DEPRECATION_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4505;4510;4512;4610;4838;4995;4996;4456;4457;4458;4459;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>PDF_ENABLE_XFA;V8_DEPRECATION_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PDF_ENABLE_XFA;V8_DEPRECATION_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4505;4510;4512;4610;4838;4995;4996;4456;4457;4458;4459;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>PDF_ENABLE_XFA;V8_DEPRECATION_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PDF_ENABLE_XFA;V8_DEPRECATION_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="xfa.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xfa\include\foxitxfa.h" />
+    <ClInclude Include="xfa\include\fwl\adapter\fwl_adapterclipboardmgr.h" />
+    <ClInclude Include="xfa\include\fwl\adapter\fwl_adaptercursormgr.h" />
+    <ClInclude Include="xfa\include\fwl\adapter\fwl_adaptermonitormgr.h" />
+    <ClInclude Include="xfa\include\fwl\adapter\fwl_adapternative.h" />
+    <ClInclude Include="xfa\include\fwl\adapter\fwl_adapterthreadmgr.h" />
+    <ClInclude Include="xfa\include\fwl\adapter\fwl_adaptertimermgr.h" />
+    <ClInclude Include="xfa\include\fwl\adapter\fwl_adapterwidgetmgr.h" />
+    <ClInclude Include="xfa\include\fwl\adapter\fwl_sdadapterimp.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_barcode.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_caret.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_checkbox.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_combobox.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_datetimepicker.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_edit.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_listbox.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_menu.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_monthcalendar.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_picturebox.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_pushbutton.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_scrollbar.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_spinbutton.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fwl_tooltipctrl.h" />
+    <ClInclude Include="xfa\include\fwl\basewidget\fxmath_barcode.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_app.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_content.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_error.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_form.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_grid.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_note.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_panel.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_target.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_theme.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_thread.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_timer.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_widget.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_widgetdef.h" />
+    <ClInclude Include="xfa\include\fwl\core\fwl_widgetmgr.h" />
+    <ClInclude Include="xfa\include\fwl\fwl.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\app.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\barcode.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\caret.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\checkbox.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\combobox.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\datetimepicker.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\edit.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\listbox.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\picturebox.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\pushbutton.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\scrollbar.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\theme.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\tooltipctrl.h" />
+    <ClInclude Include="xfa\include\fwl\lightwidget\widget.h" />
+    <ClInclude Include="xfa\include\fwl\theme\barcodetp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\carettp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\checkboxtp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\comboboxtp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\datetimepickertp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\edittp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\formtp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\listboxtp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\monthcalendartp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\pictureboxtp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\pushbuttontp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\scrollbartp.h" />
+    <ClInclude Include="xfa\include\fwl\theme\utils.h" />
+    <ClInclude Include="xfa\include\fwl\theme\widgettp.h" />
+    <ClInclude Include="xfa\include\fxbarcode\BC_BarCode.h" />
+    <ClInclude Include="xfa\include\fxfa\fxfa.h" />
+    <ClInclude Include="xfa\include\fxfa\fxfa_basic.h" />
+    <ClInclude Include="xfa\include\fxfa\fxfa_objectacc.h" />
+    <ClInclude Include="xfa\include\fxfa\fxfa_widget.h" />
+    <ClInclude Include="xfa\include\fxgraphics\fx_graphics.h" />
+    <ClInclude Include="xfa\include\fxjse\fxjse.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_brs.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_css.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_img.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_mem.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_pen.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_psr.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_pth.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_rdr.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_rdv.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_tto.h" />
+    <ClInclude Include="xfa\src\fdp\include\fde_xml.h" />
+    <ClInclude Include="xfa\src\fdp\src\css\fde_csscache.h" />
+    <ClInclude Include="xfa\src\fdp\src\css\fde_cssdatatable.h" />
+    <ClInclude Include="xfa\src\fdp\src\css\fde_cssdeclaration.h" />
+    <ClInclude Include="xfa\src\fdp\src\css\fde_cssstyleselector.h" />
+    <ClInclude Include="xfa\src\fdp\src\css\fde_cssstylesheet.h" />
+    <ClInclude Include="xfa\src\fdp\src\css\fde_csssyntax.h" />
+    <ClInclude Include="xfa\src\fdp\src\fde\fde_devbasic.h" />
+    <ClInclude Include="xfa\src\fdp\src\fde\fde_gedevice.h" />
+    <ClInclude Include="xfa\src\fdp\src\fde\fde_geobject.h" />
+    <ClInclude Include="xfa\src\fdp\src\fde\fde_iterator.h" />
+    <ClInclude Include="xfa\src\fdp\src\fde\fde_object.h" />
+    <ClInclude Include="xfa\src\fdp\src\fde\fde_render.h" />
+    <ClInclude Include="xfa\src\fdp\src\tto\fde_textout.h" />
+    <ClInclude Include="xfa\src\fdp\src\xml\fde_xml.h" />
+    <ClInclude Include="xfa\src\fee\include\fx_wordbreak.h" />
+    <ClInclude Include="xfa\src\fee\include\ifde_txtedtbuf.h" />
+    <ClInclude Include="xfa\src\fee\include\ifde_txtedtengine.h" />
+    <ClInclude Include="xfa\src\fee\include\ifde_txtedtpage.h" />
+    <ClInclude Include="xfa\src\fee\src\fee\fde_txtedtblock.h" />
+    <ClInclude Include="xfa\src\fee\src\fee\fde_txtedtbuf.h" />
+    <ClInclude Include="xfa\src\fee\src\fee\fde_txtedtengine.h" />
+    <ClInclude Include="xfa\src\fee\src\fee\fde_txtedtpage.h" />
+    <ClInclude Include="xfa\src\fee\src\fee\fde_txtedtparag.h" />
+    <ClInclude Include="xfa\src\fee\src\fx_wordbreak\fx_wordbreak_impl.h" />
+    <ClInclude Include="xfa\src\fgas\include\fgas.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_alg.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_cpg.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_datetime.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_fnt.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_lbk.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_lgg.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_locale.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_mem.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_rbk.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_sax.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_stm.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_sys.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_tbk.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_ucd.h" />
+    <ClInclude Include="xfa\src\fgas\include\fx_utl.h" />
+    <ClInclude Include="xfa\src\fgas\src\crt\fx_memory.h" />
+    <ClInclude Include="xfa\src\fgas\src\crt\fx_stream.h" />
+    <ClInclude Include="xfa\src\fgas\src\crt\fx_utils.h" />
+    <ClInclude Include="xfa\src\fgas\src\fgas_base.h" />
+    <ClInclude Include="xfa\src\fgas\src\font\fx_fontutils.h" />
+    <ClInclude Include="xfa\src\fgas\src\font\fx_gefont.h" />
+    <ClInclude Include="xfa\src\fgas\src\font\fx_stdfontmgr.h" />
+    <ClInclude Include="xfa\src\fgas\src\layout\fx_rtfbreak.h" />
+    <ClInclude Include="xfa\src\fgas\src\layout\fx_textbreak.h" />
+    <ClInclude Include="xfa\src\fgas\src\layout\fx_unicode.h" />
+    <ClInclude Include="xfa\src\fgas\src\localization\fx_localeimp.h" />
+    <ClInclude Include="xfa\src\fgas\src\localization\fx_localemgr.h" />
+    <ClInclude Include="xfa\src\fgas\src\xml\fx_sax_imp.h" />
+    <ClInclude Include="xfa\src\foxitlib.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_barcodeimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_caretimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_checkboximp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_comboboximp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_datetimepickerimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_editimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_formproxyimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_listboximp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_monthcalendarimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_pictureboximp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_pushbuttonimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_scrollbarimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_spinbuttonimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fwl_tooltipctrlimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\basewidget\include\fxmath_barcodeimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_appimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_contentimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_formimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_gridimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_noteimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_panelimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_targetimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_threadimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_widgetimp.h" />
+    <ClInclude Include="xfa\src\fwl\src\core\include\fwl_widgetmgrimp.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonBitArray.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonBitMatrix.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonBitSource.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonByteArray.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonByteMatrix.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonCharacterSetECI.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonDecoderResult.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonECI.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_CommonPerspectiveTransform.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_WhiteRectangleDetector.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\BC_GlobalHistogramBinarizer.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\reedsolomon\BC_ReedSolomon.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\reedsolomon\BC_ReedSolomonDecoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\reedsolomon\BC_ReedSolomonGF256.h" />
+    <ClInclude Include="xfa\src\fxbarcode\common\reedsolomon\BC_ReedSolomonGF256Poly.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixBitMatrixParser.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixDataBlock.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixDecodedBitStreamParser.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixDecoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixDetector.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixReader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixSymbolInfo144.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixVersion.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixWriter.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_ASCIIEncoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_Base256Encoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_C40Encoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_EdifactEncoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_EncoderContext.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_ErrorCorrection.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_SymbolInfo.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_SymbolShapeHint.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_TextEncoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_X12Encoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_DefaultPlacement.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_Encoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\datamatrix\BC_HighLevelEncoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedCodaBarReader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedCodaBarWriter.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedCode128Reader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedCode128Writer.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedCode39Reader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedCode39Writer.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedEAN13Reader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedEAN13Writer.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedEAN8Reader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedEAN8Writer.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OneDimReader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OneDimWriter.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OneDReader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedUPCAReader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\oned\BC_OnedUPCAWriter.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417BarcodeMatrix.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417BarcodeMetadata.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417BarcodeRow.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417BarcodeValue.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417BoundingBox.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417Codeword.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417CodewordDecoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417Common.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417Compaction.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417DecodedBitStreamParser.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417DetectionResult.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417DetectionResultColumn.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417DetectionResultRowIndicatorColumn.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417Detector.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417DetectorResult.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417Dimensions.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417ECErrorCorrection.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417ECModulusGF.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417ECModulusPoly.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417ErrorCorrection.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417HighLevelEncoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417Reader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417ResultMetadata.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417ScanningDecoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\pdf417\BC_PDF417Writer.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRAlignmentPattern.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRAlignmentPatternFinder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRBitMatrixParser.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderBitVector.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderBlockPair.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderDecoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCodeReader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderECB.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderECBlocks.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderEncoder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderErrorCorrectionLevel.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderFormatInformation.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderMaskUtil.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderMatrixUtil.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderMode.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCoderVersion.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRCodeWriter.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRDataBlock.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRDataMask.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRDecodedBitStreamParser.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRDetector.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRDetectorResult.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRFinderPattern.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRFinderPatternFinder.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_QRGridSampler.h" />
+    <ClInclude Include="xfa\src\fxbarcode\qrcode\BC_FinderPatternInfo.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_Binarizer.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_BinaryBitmap.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_BufferedImageLuminanceSource.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_DecoderResult.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_Dimension.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_LuminanceSource.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_Reader.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_ResultPoint.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_TwoDimWriter.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_UtilCodingConvert.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_UtilRSS.h" />
+    <ClInclude Include="xfa\src\fxbarcode\BC_Writer.h" />
+    <ClInclude Include="xfa\src\fxbarcode\barcode.h" />
+    <ClInclude Include="xfa\src\fxbarcode\utils.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_checksum.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffapp.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffbarcode.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffcheckbutton.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffchoicelist.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffConfigAcc.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffdoc.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffdochandler.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffdocview.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffdraw.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffexclgroup.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_fffield.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffimage.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffimageedit.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffnotify.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffpageview.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffpath.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffpushbutton.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffsignature.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffsubform.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_fftext.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_fftextedit.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffwidget.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffwidgetacc.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_ffwidgethandler.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_fontmgr.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_fwladapter.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_fwltheme.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_rendercontext.h" />
+    <ClInclude Include="xfa\src\fxfa\src\app\xfa_textlayout.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\fxfa_localevalue.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_common.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_docdata.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_doclayout.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_document.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_fm2jsapi.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_localemgr.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_object.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_parser.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_script.h" />
+    <ClInclude Include="xfa\src\fxfa\src\common\xfa_utils.h" />
+    <ClInclude Include="xfa\src\fxfa\src\fm2js\xfa_error.h" />
+    <ClInclude Include="xfa\src\fxfa\src\fm2js\xfa_expression.h" />
+    <ClInclude Include="xfa\src\fxfa\src\fm2js\xfa_fm2js.h" />
+    <ClInclude Include="xfa\src\fxfa\src\fm2js\xfa_fm2jscontext.h" />
+    <ClInclude Include="xfa\src\fxfa\src\fm2js\xfa_fmparse.h" />
+    <ClInclude Include="xfa\src\fxfa\src\fm2js\xfa_lexer.h" />
+    <ClInclude Include="xfa\src\fxfa\src\fm2js\xfa_program.h" />
+    <ClInclude Include="xfa\src\fxfa\src\fm2js\xfa_simpleexpression.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_basic_imp.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_document_datadescription_imp.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_document_datamerger_imp.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_document_layout_imp.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_document_serialize.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_layout_appadapter.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_layout_itemlayout.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_layout_pagemgr_new.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_locale.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_parser_imp.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_datawindow.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_eventpseudomodel.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_hostpseudomodel.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_imp.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_layoutpseudomodel.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_logpseudomodel.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_nodehelper.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_resolveprocessor.h" />
+    <ClInclude Include="xfa\src\fxfa\src\parser\xfa_script_signaturepseudomodel.h" />
+    <ClInclude Include="xfa\src\fxgraphics\src\fx_path_generator.h" />
+    <ClInclude Include="xfa\src\fxgraphics\src\pre.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xfa\src\fdp\src\css\fde_csscache.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\css\fde_cssdatatable.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\css\fde_cssdeclaration.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\css\fde_cssstyleselector.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\css\fde_cssstylesheet.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\css\fde_csssyntax.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\fde\fde_devbasic.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\fde\fde_gedevice.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\fde\fde_geobject.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\fde\fde_iterator.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\fde\fde_object.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\fde\fde_render.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\tto\fde_textout.cpp" />
+    <ClCompile Include="xfa\src\fdp\src\xml\fde_xml.cpp" />
+    <ClCompile Include="xfa\src\fee\src\fee\fde_txtedtblock.cpp" />
+    <ClCompile Include="xfa\src\fee\src\fee\fde_txtedtbuf.cpp" />
+    <ClCompile Include="xfa\src\fee\src\fee\fde_txtedtengine.cpp" />
+    <ClCompile Include="xfa\src\fee\src\fee\fde_txtedtpage.cpp" />
+    <ClCompile Include="xfa\src\fee\src\fee\fde_txtedtparag.cpp" />
+    <ClCompile Include="xfa\src\fee\src\fx_wordbreak\fx_wordbreakdata.cpp" />
+    <ClCompile Include="xfa\src\fee\src\fx_wordbreak\fx_wordbreak_impl.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\crt\fx_algorithm.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\crt\fx_codepage.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\crt\fx_encode.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\crt\fx_memory.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\crt\fx_stream.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\crt\fx_system.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\crt\fx_utils.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\font\fx_fontutils.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\font\fx_gefont.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\font\fx_stdfontmgr.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\layout\fx_linebreak.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\layout\fx_rtfbreak.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\layout\fx_textbreak.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\layout\fx_unicode.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\localization\fx_datetime.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\localization\fx_locale.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\localization\fx_localemgr.cpp" />
+    <ClCompile Include="xfa\src\fgas\src\xml\fx_sax_imp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_barcodeimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_caretimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_checkboximp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_comboboximp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_datetimepickerimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_editimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_formproxyimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_listboximp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_monthcalendarimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_pictureboximp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_pushbuttonimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_scrollbarimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_spinbuttonimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fwl_tooltipctrlimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\basewidget\fxmath_barcodeimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_appimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_contentimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_formimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_gridimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_noteimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_panelimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_sdadapterimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_targetimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_threadimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_timerimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_widgetimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\core\fwl_widgetmgrimp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\app.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\barcode.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\caret.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\checkbox.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\combobox.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\datetimepicker.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\edit.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\listbox.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\picturebox.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\pushbutton.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\scrollbar.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\theme.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\tooltipctrl.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\lightwidget\widget.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\barcodetp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\carettp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\checkboxtp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\comboboxtp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\datetimepickertp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\edittp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\formtp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\listboxtp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\monthcalendartp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\pictureboxtp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\pushbuttontp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\scrollbartp.cpp" />
+    <ClCompile Include="xfa\src\fwl\src\theme\widgettp.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonBitArray.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonBitMatrix.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonBitSource.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonByteArray.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonByteMatrix.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonCharacterSetECI.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonDecoderResult.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonECI.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_CommonPerspectiveTransform.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_WhiteRectangleDetector.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\BC_GlobalHistogramBinarizer.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\reedsolomon\BC_ReedSolomon.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\reedsolomon\BC_ReedSolomonDecoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\reedsolomon\BC_ReedSolomonGF256.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\common\reedsolomon\BC_ReedSolomonGF256Poly.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixBitMatrixParser.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixDataBlock.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixDecodedBitStreamParser.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixDecoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixDetector.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixReader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixSymbolInfo144.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixVersion.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DataMatrixWriter.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_ASCIIEncoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_Base256Encoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_C40Encoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_EdifactEncoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_EncoderContext.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_ErrorCorrection.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_SymbolInfo.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_SymbolShapeHint.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_TextEncoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_X12Encoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_DefaultPlacement.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_Encoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\datamatrix\BC_HighLevelEncoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedCodaBarReader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedCodaBarWriter.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedCode128Reader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedCode128Writer.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedCode39Reader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedCode39Writer.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedEAN13Reader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedEAN13Writer.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedEAN8Reader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedEAN8Writer.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OneDimReader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OneDimWriter.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OneDReader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedUPCAReader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\oned\BC_OnedUPCAWriter.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417BarcodeMatrix.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417BarcodeMetadata.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417BarcodeRow.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417BarcodeValue.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417BoundingBox.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417Codeword.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417CodewordDecoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417Common.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417Compaction.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417DecodedBitStreamParser.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417DetectionResult.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417DetectionResultColumn.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417DetectionResultRowIndicatorColumn.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417Detector.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417DetectorResult.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417Dimensions.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417ECErrorCorrection.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417ECModulusGF.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417ECModulusPoly.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417ErrorCorrection.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417HighLevelEncoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417Reader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417ResultMetadata.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417ScanningDecoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\pdf417\BC_PDF417Writer.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRAlignmentPattern.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRAlignmentPatternFinder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRBitMatrixParser.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderBitVector.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderBlockPair.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderDecoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCodeReader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderECB.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderECBlocks.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderEncoder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderErrorCorrectionLevel.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderFormatInformation.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderMaskUtil.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderMatrixUtil.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderMode.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCoderVersion.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRCodeWriter.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRDataBlock.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRDataMask.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRDecodedBitStreamParser.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRDetector.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRDetectorResult.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRFinderPattern.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRFinderPatternFinder.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_QRGridSampler.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\qrcode\BC_FinderPatternInfo.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_BarCode.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_Binarizer.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_BinaryBitmap.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_BufferedImageLuminanceSource.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_Dimension.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_Library.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_LuminanceSource.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_Reader.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_ResultPoint.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_TwoDimWriter.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_UtilCodingConvert.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_UtilRSS.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_Utils.cpp" />
+    <ClCompile Include="xfa\src\fxbarcode\BC_Writer.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_checksum.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffapp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffbarcode.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffcheckbutton.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffchoicelist.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffConfigAcc.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffdoc.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffdochandler.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffdocview.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffdraw.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffexclgroup.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_fffield.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffimage.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffimageedit.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffnotify.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffpageview.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffpath.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffpushbutton.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffsignature.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffsubform.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_fftext.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_fftextedit.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffwidget.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffwidgetacc.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_ffwidgethandler.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_fontmgr.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_fwladapter.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_fwltheme.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_rendercontext.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\app\xfa_textlayout.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\fm2js\xfa_error.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\fm2js\xfa_expression.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\fm2js\xfa_fm2jsapi.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\fm2js\xfa_fm2jscontext.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\fm2js\xfa_fmparse.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\fm2js\xfa_lexer.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\fm2js\xfa_program.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\fm2js\xfa_simpleexpression.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_basic_data.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_basic_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_document_datadescription_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_document_datamerger_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_document_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_document_layout_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_document_serialize.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_layout_appadapter.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_layout_itemlayout.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_layout_pagemgr_new.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_locale.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_localemgr.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_localevalue.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_objectacc_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_object_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_parser_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_datawindow.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_eventpseudomodel.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_hostpseudomodel.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_imp.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_layoutpseudomodel.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_logpseudomodel.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_nodehelper.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_resolveprocessor.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_script_signaturepseudomodel.cpp" />
+    <ClCompile Include="xfa\src\fxfa\src\parser\xfa_utils_imp.cpp" />
+    <ClCompile Include="xfa\src\fxgraphics\src\fx_graphics.cpp" />
+    <ClCompile Include="xfa\src\fxgraphics\src\fx_path_generator.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

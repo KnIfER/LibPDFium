@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C688B38E-97D0-FE68-DC30-2D7024CA94B5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fpdfapi</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\v8\third_party\cygwin\bin\;$(MSBuildProjectDirectory)\v8\third_party\python_26\</ExecutablePath>
+    <OutDir>build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)lib\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4018;4146;4333;4345;4267;4245;4310;4389;4701;4702;4706;4800;4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4505;4510;4512;4610;4838;4995;4996;4456;4457;4458;4459;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>OPJ_STATIC;PNG_PREFIX;PNGPREFIX_H;PNG_USE_READ_MACROS;V8_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies></AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>OPJ_STATIC;PNG_PREFIX;PNGPREFIX_H;PNG_USE_READ_MACROS;V8_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4018;4146;4333;4345;4267;4245;4310;4389;4701;4702;4706;4800;4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4505;4510;4512;4610;4838;4995;4996;4456;4457;4458;4459;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>OPJ_STATIC;PNG_PREFIX;PNGPREFIX_H;PNG_USE_READ_MACROS;V8_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies></AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>OPJ_STATIC;PNG_PREFIX;PNGPREFIX_H;PNG_USE_READ_MACROS;V8_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4018;4146;4333;4345;4267;4245;4310;4389;4701;4702;4706;4800;4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4505;4510;4512;4610;4838;4995;4996;4456;4457;4458;4459;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>OPJ_STATIC;PNG_PREFIX;PNGPREFIX_H;PNG_USE_READ_MACROS;V8_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies></AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>OPJ_STATIC;PNG_PREFIX;PNGPREFIX_H;PNG_USE_READ_MACROS;V8_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4018;4146;4333;4345;4267;4245;4310;4389;4701;4702;4706;4800;4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4505;4510;4512;4610;4838;4995;4996;4456;4457;4458;4459;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>OPJ_STATIC;PNG_PREFIX;PNGPREFIX_H;PNG_USE_READ_MACROS;V8_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies></AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;.;third_party\freetype\include;third_party\freetype\include\freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>OPJ_STATIC;PNG_PREFIX;PNGPREFIX_H;PNG_USE_READ_MACROS;V8_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="pdfium.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\include\fpdfapi\fpdf_module.h"/>
+    <ClInclude Include="core\include\fpdfapi\fpdf_objects.h"/>
+    <ClInclude Include="core\include\fpdfapi\fpdf_page.h"/>
+    <ClInclude Include="core\include\fpdfapi\fpdf_pageobj.h"/>
+    <ClInclude Include="core\include\fpdfapi\fpdf_parser.h"/>
+    <ClInclude Include="core\include\fpdfapi\fpdf_render.h"/>
+    <ClInclude Include="core\include\fpdfapi\fpdf_resource.h"/>
+    <ClInclude Include="core\include\fpdfapi\fpdf_serial.h"/>
+    <ClInclude Include="core\src\fpdfapi\fpdf_cmaps\cmap_int.h"/>
+    <ClInclude Include="core\src\fpdfapi\fpdf_edit\editint.h"/>
+    <ClInclude Include="core\src\fpdfapi\fpdf_font\font_int.h"/>
+    <ClInclude Include="core\src\fpdfapi\fpdf_font\ttgsubtable.h"/>
+    <ClInclude Include="core\src\fpdfapi\fpdf_page\pageint.h"/>
+    <ClInclude Include="core\src\fpdfapi\fpdf_parser\parser_int.h"/>
+    <ClInclude Include="core\src\fpdfapi\fpdf_render\render_int.h"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\src\fpdfapi\fpdf_basic_module.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\Adobe-CNS1-UCS2_5.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\B5pc-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\B5pc-V_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\cmaps_cns1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\CNS-EUC-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\CNS-EUC-V_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\ETen-B5-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\ETen-B5-V_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\ETenms-B5-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\ETenms-B5-V_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\HKscs-B5-H_5.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\HKscs-B5-V_5.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\UniCNS-UCS2-H_3.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\UniCNS-UCS2-V_3.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\CNS1\UniCNS-UTF16-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\fpdf_cmaps.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\Adobe-GB1-UCS2_5.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\cmaps_gb1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GB-EUC-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GB-EUC-V_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GBK-EUC-H_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GBK-EUC-V_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GBK2K-H_5.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GBK2K-V_5.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GBKp-EUC-H_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GBKp-EUC-V_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GBpc-EUC-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\GBpc-EUC-V_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\UniGB-UCS2-H_4.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\GB1\UniGB-UCS2-V_4.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\83pv-RKSJ-H_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\90ms-RKSJ-H_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\90ms-RKSJ-V_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\90msp-RKSJ-H_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\90msp-RKSJ-V_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\90pv-RKSJ-H_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\Add-RKSJ-H_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\Add-RKSJ-V_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\Adobe-Japan1-UCS2_4.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\cmaps_japan1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\EUC-H_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\EUC-V_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\Ext-RKSJ-H_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\Ext-RKSJ-V_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\H_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\UniJIS-UCS2-HW-H_4.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\UniJIS-UCS2-HW-V_4.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\UniJIS-UCS2-H_4.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\UniJIS-UCS2-V_4.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Japan1\V_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\Adobe-Korea1-UCS2_2.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\cmaps_korea1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\KSC-EUC-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\KSC-EUC-V_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\KSCms-UHC-HW-H_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\KSCms-UHC-HW-V_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\KSCms-UHC-H_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\KSCms-UHC-V_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\KSCpc-EUC-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\UniKS-UCS2-H_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\UniKS-UCS2-V_1.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_cmaps\Korea1\UniKS-UTF16-H_0.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_edit\fpdf_edit_content.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_edit\fpdf_edit_create.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_edit\fpdf_edit_doc.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_edit\fpdf_edit_image.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_font\fpdf_font.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_font\fpdf_font_charset.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_font\fpdf_font_cid.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_font\ttgsubtable.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_colors.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_doc.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_func.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_graph_state.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_image.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_parser.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_parser_old.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_path.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_page\fpdf_page_pattern.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_parser\fpdf_parser_decode.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_parser\fpdf_parser_document.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_parser\fpdf_parser_encrypt.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_parser\fpdf_parser_fdf.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_parser\fpdf_parser_objects.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_parser\fpdf_parser_parser.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_parser\fpdf_parser_utility.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_render\fpdf_render.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_render\fpdf_render_cache.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_render\fpdf_render_image.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_render\fpdf_render_loadimage.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_render\fpdf_render_pattern.cpp"/>
+    <ClCompile Include="core\src\fpdfapi\fpdf_render\fpdf_render_text.cpp"/>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

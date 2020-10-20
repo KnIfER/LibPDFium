@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\agg">
+      <UniqueIdentifier>{F5219C8B-FD43-A88A-6629-375FE1C99AE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\agg\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\agg">
+      <UniqueIdentifier>{F5219C8B-FD43-A88A-6629-375FE1C99AE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\agg\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\android">
+      <UniqueIdentifier>{840B8E33-5F8C-45A0-5FD6-F07AA5687203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\apple">
+      <UniqueIdentifier>{BD50E344-EA83-B09B-9810-C56D8FAECD09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\apple">
+      <UniqueIdentifier>{BD50E344-EA83-B09B-9810-C56D8FAECD09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\apple">
+      <UniqueIdentifier>{BD50E344-EA83-B09B-9810-C56D8FAECD09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\apple">
+      <UniqueIdentifier>{BD50E344-EA83-B09B-9810-C56D8FAECD09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\dib">
+      <UniqueIdentifier>{28A0EF27-F4D4-5F6E-F64E-FA3F02726BE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\dib">
+      <UniqueIdentifier>{28A0EF27-F4D4-5F6E-F64E-FA3F02726BE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\dib">
+      <UniqueIdentifier>{28A0EF27-F4D4-5F6E-F64E-FA3F02726BE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\dib">
+      <UniqueIdentifier>{28A0EF27-F4D4-5F6E-F64E-FA3F02726BE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\dib">
+      <UniqueIdentifier>{28A0EF27-F4D4-5F6E-F64E-FA3F02726BE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\dib">
+      <UniqueIdentifier>{28A0EF27-F4D4-5F6E-F64E-FA3F02726BE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata">
+      <UniqueIdentifier>{C09E9E28-04F4-C2D0-A178-755D8116632B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\fontdata\chromefontdata">
+      <UniqueIdentifier>{CF84B234-151F-C683-DEB0-3C820B1218CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\freetype">
+      <UniqueIdentifier>{B8CA88D1-319B-A7AF-9169-5F1348D57504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\ge">
+      <UniqueIdentifier>{B7E6219F-F445-25A7-8051-18B42E7B2AB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\win32">
+      <UniqueIdentifier>{789FEF16-EFE7-512E-F91B-DF7E0D72FB79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\win32">
+      <UniqueIdentifier>{789FEF16-EFE7-512E-F91B-DF7E0D72FB79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\win32">
+      <UniqueIdentifier>{789FEF16-EFE7-512E-F91B-DF7E0D72FB79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\win32">
+      <UniqueIdentifier>{789FEF16-EFE7-512E-F91B-DF7E0D72FB79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\win32">
+      <UniqueIdentifier>{789FEF16-EFE7-512E-F91B-DF7E0D72FB79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\win32">
+      <UniqueIdentifier>{789FEF16-EFE7-512E-F91B-DF7E0D72FB79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge">
+      <UniqueIdentifier>{B30911D4-B741-39A0-0E61-5ADB3EE313F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fxge\win32">
+      <UniqueIdentifier>{789FEF16-EFE7-512E-F91B-DF7E0D72FB79}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\include\fxge\fpf.h">
+      <Filter>core\include\fxge</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fxge\fx_dib.h">
+      <Filter>core\include\fxge</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fxge\fx_font.h">
+      <Filter>core\include\fxge</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fxge\fx_freetype.h">
+      <Filter>core\include\fxge</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fxge\fx_ge.h">
+      <Filter>core\include\fxge</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fxge\fx_ge_apple.h">
+      <Filter>core\include\fxge</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fxge\fx_ge_win32.h">
+      <Filter>core\include\fxge</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\fxge\agg\include\fx_agg_driver.h">
+      <Filter>core\src\fxge\agg\include</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\agg\src\fx_agg_driver.cpp">
+      <Filter>core\src\fxge\agg\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\android\fpf_skiafont.cpp">
+      <Filter>core\src\fxge\android</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\android\fpf_skiafont.h">
+      <Filter>core\src\fxge\android</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\android\fpf_skiafontmgr.cpp">
+      <Filter>core\src\fxge\android</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\android\fpf_skiafontmgr.h">
+      <Filter>core\src\fxge\android</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\android\fpf_skiamodule.cpp">
+      <Filter>core\src\fxge\android</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\android\fpf_skiamodule.h">
+      <Filter>core\src\fxge\android</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\android\fx_android_font.cpp">
+      <Filter>core\src\fxge\android</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\android\fx_android_font.h">
+      <Filter>core\src\fxge\android</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\android\fx_android_imp.cpp">
+      <Filter>core\src\fxge\android</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\android\fx_fpf.h">
+      <Filter>core\src\fxge\android</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\fxge\apple\apple_int.h">
+      <Filter>core\src\fxge\apple</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\apple\fx_apple_platform.cpp">
+      <Filter>core\src\fxge\apple</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\apple\fx_mac_imp.cpp">
+      <Filter>core\src\fxge\apple</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\apple\fx_quartz_device.cpp">
+      <Filter>core\src\fxge\apple</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\dib\dib_int.h">
+      <Filter>core\src\fxge\dib</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\dib\fx_dib_composite.cpp">
+      <Filter>core\src\fxge\dib</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\dib\fx_dib_convert.cpp">
+      <Filter>core\src\fxge\dib</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\dib\fx_dib_engine.cpp">
+      <Filter>core\src\fxge\dib</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\dib\fx_dib_main.cpp">
+      <Filter>core\src\fxge\dib</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\dib\fx_dib_transform.cpp">
+      <Filter>core\src\fxge\dib</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\fontdata\chromefontdata\chromefontdata.h">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitDingbats.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitFixed.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitFixedBold.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitFixedBoldItalic.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitFixedItalic.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSans.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSansBold.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSansBoldItalic.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSansItalic.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSansMM.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSerif.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSerifBold.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSerifBoldItalic.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSerifItalic.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSerifMM.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\fontdata\chromefontdata\FoxitSymbol.c">
+      <Filter>core\src\fxge\fontdata\chromefontdata</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\freetype\fx_freetype.c">
+      <Filter>core\src\fxge\freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\ge\fx_ge.cpp">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\ge\fx_ge_device.cpp">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\ge\fx_ge_font.cpp">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\ge\fx_ge_fontmap.cpp">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\ge\fx_ge_linux.cpp">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\ge\fx_ge_path.cpp">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\ge\fx_ge_ps.cpp">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\ge\fx_ge_text.cpp">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\ge\text_int.h">
+      <Filter>core\src\fxge\ge</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\fxge\win32\dwrite_int.h">
+      <Filter>core\src\fxge\win32</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fxge\win32\fx_win32_device.cpp">
+      <Filter>core\src\fxge\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\win32\fx_win32_dib.cpp">
+      <Filter>core\src\fxge\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\win32\fx_win32_dwrite.cpp">
+      <Filter>core\src\fxge\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\win32\fx_win32_gdipext.cpp">
+      <Filter>core\src\fxge\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fxge\win32\fx_win32_print.cpp">
+      <Filter>core\src\fxge\win32</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fxge\win32\win32_int.h">
+      <Filter>core\src\fxge\win32</Filter>
+    </ClInclude>
+    <None Include="pdfium.gyp"/>
+  </ItemGroup>
+</Project>

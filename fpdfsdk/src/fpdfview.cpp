@@ -248,8 +248,6 @@ DLLEXPORT void STDCALL FPDF_InitLibraryWithConfig(
   pModuleMgr->LoadEmbeddedCNS1CMaps();
   pModuleMgr->LoadEmbeddedKorea1CMaps();
 #endif  // PDF_ENABLE_XFA
-  if (cfg && cfg->version >= 2)
-    IJS_Runtime::Initialize(cfg->m_v8EmbedderSlot, cfg->m_pIsolate);
 }
 
 DLLEXPORT void STDCALL FPDF_DestroyLibrary() {

@@ -1,6 +1,6 @@
 {
   "variables": {
-    "pdf_enable_v8%": 1,
+    "pdf_enable_v8%": 0,
   },
   "target_defaults": {
     "defines": [

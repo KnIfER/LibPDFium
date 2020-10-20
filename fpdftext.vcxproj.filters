@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdftext">
+      <UniqueIdentifier>{4090763A-3509-B5C9-6BB2-5CF3F05F7D35}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\include\fpdftext\fpdf_text.h">
+      <Filter>core\include\fpdftext</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fpdftext\fpdf_text.cpp">
+      <Filter>core\src\fpdftext</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdftext\fpdf_text_int.cpp">
+      <Filter>core\src\fpdftext</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdftext\fpdf_text_search.cpp">
+      <Filter>core\src\fpdftext</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fpdftext\text_int.h">
+      <Filter>core\src\fpdftext</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\fpdftext\txtproc.h">
+      <Filter>core\src\fpdftext</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fpdftext\unicodenormalization.cpp">
+      <Filter>core\src\fpdftext</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdftext\unicodenormalizationdata.cpp">
+      <Filter>core\src\fpdftext</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fpdftext\unicodenormalizationdata.h">
+      <Filter>core\src\fpdftext</Filter>
+    </ClInclude>
+    <None Include="pdfium.gyp"/>
+  </ItemGroup>
+</Project>

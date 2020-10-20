@@ -13,7 +13,7 @@
     'use_goma%': 0,
     'gomadir%': '',
     'msvs_multi_core_compile%': '1',
-    'pdf_enable_xfa%': 1,
+    'pdf_enable_xfa%': 0,
     'variables': {
       'variables': {
         'variables': {

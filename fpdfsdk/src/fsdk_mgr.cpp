@@ -11,7 +11,6 @@
 
 #include "fpdfsdk/include/formfiller/FFL_FormFiller.h"
 #include "fpdfsdk/include/fsdk_define.h"
-#include "fpdfsdk/include/javascript/IJavaScript.h"
 #include "public/fpdf_ext.h"
 #include "third_party/base/stl_util.h"
 
@@ -365,11 +364,11 @@ void CPDFDoc_Environment::JS_docmailForm(void* mailData,
 }
 
 IJS_Runtime* CPDFDoc_Environment::GetJSRuntime() {
-  if (!IsJSInitiated())
-    return NULL;
-  if (!m_pJSRuntime)
-    m_pJSRuntime.reset(IJS_Runtime::Create(this));
-  return m_pJSRuntime.get();
+  //if (!IsJSInitiated())
+  //  return NULL;
+  //if (!m_pJSRuntime)
+  //  m_pJSRuntime.reset(IJS_Runtime::Create(this));
+  return 0;
 }
 
 CPDFSDK_AnnotHandlerMgr* CPDFDoc_Environment::GetAnnotHandlerMgr() {

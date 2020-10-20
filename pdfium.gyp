@@ -7,7 +7,7 @@
     # TODO(thakis): Enable this, pdfium:29
     #'chromium_code': 1,
     'pdf_use_skia%': 0,
-    'pdf_enable_v8%': 1,
+    'pdf_enable_v8%': 0,
     'pdf_enable_xfa%': 0, # Set to 1 by standalone.gypi in a standalone build.
     'conditions': [
       ['OS=="linux"', {
@@ -86,7 +86,6 @@
         'fxcrt',
         'fxedit',
         'fxge',
-        'javascript',
         'pdfwindow',
       ],
       'sources': [
@@ -647,77 +646,6 @@
       ],
     },
     {
-      'target_name': 'javascript',
-      'type': 'static_library',
-      'sources': [
-        'fpdfsdk/include/javascript/IJavaScript.h',
-        'fpdfsdk/src/javascript/JS_Runtime_Stub.cpp',
-      ],
-      'conditions': [
-        ['pdf_enable_v8==1', {
-          'include_dirs': [
-            '<(DEPTH)/v8',
-            '<(DEPTH)/v8/include',
-          ],
-          'dependencies': [
-            '<(DEPTH)/v8/tools/gyp/v8.gyp:v8',
-          ],
-          'export_dependent_settings': [
-            '<(DEPTH)/v8/tools/gyp/v8.gyp:v8',
-          ],
-          'sources!': [
-            'fpdfsdk/src/javascript/JS_Runtime_Stub.cpp',
-          ],
-          'sources': [
-            'fpdfsdk/src/javascript/Consts.cpp',
-            'fpdfsdk/src/javascript/Consts.h',
-            'fpdfsdk/src/javascript/Document.cpp',
-            'fpdfsdk/src/javascript/Document.h',
-            'fpdfsdk/src/javascript/Field.cpp',
-            'fpdfsdk/src/javascript/Field.h',
-            'fpdfsdk/src/javascript/Icon.cpp',
-            'fpdfsdk/src/javascript/Icon.h',
-            'fpdfsdk/src/javascript/JS_Context.cpp',
-            'fpdfsdk/src/javascript/JS_Context.h',
-            'fpdfsdk/src/javascript/JS_Define.h',
-            'fpdfsdk/src/javascript/JS_EventHandler.cpp',
-            'fpdfsdk/src/javascript/JS_EventHandler.h',
-            'fpdfsdk/src/javascript/JS_GlobalData.cpp',
-            'fpdfsdk/src/javascript/JS_GlobalData.h',
-            'fpdfsdk/src/javascript/JS_Object.cpp',
-            'fpdfsdk/src/javascript/JS_Object.h',
-            'fpdfsdk/src/javascript/JS_Runtime.cpp',
-            'fpdfsdk/src/javascript/JS_Runtime.h',
-            'fpdfsdk/src/javascript/JS_Value.cpp',
-            'fpdfsdk/src/javascript/JS_Value.h',
-            'fpdfsdk/src/javascript/PublicMethods.cpp',
-            'fpdfsdk/src/javascript/PublicMethods.h',
-            'fpdfsdk/src/javascript/app.cpp',
-            'fpdfsdk/src/javascript/app.cpp',
-            'fpdfsdk/src/javascript/app.h',
-            'fpdfsdk/src/javascript/color.cpp',
-            'fpdfsdk/src/javascript/color.cpp',
-            'fpdfsdk/src/javascript/color.h',
-            'fpdfsdk/src/javascript/console.cpp',
-            'fpdfsdk/src/javascript/console.cpp',
-            'fpdfsdk/src/javascript/console.h',
-            'fpdfsdk/src/javascript/event.cpp',
-            'fpdfsdk/src/javascript/event.h',
-            'fpdfsdk/src/javascript/global.cpp',
-            'fpdfsdk/src/javascript/global.h',
-            'fpdfsdk/src/javascript/report.cpp',
-            'fpdfsdk/src/javascript/report.h',
-            'fpdfsdk/src/javascript/resource.cpp',
-            'fpdfsdk/src/javascript/resource.h',
-            'fpdfsdk/src/javascript/util.cpp',
-            'fpdfsdk/src/javascript/util.h',
-            'fpdfsdk/include/jsapi/fxjs_v8.h',
-            'fpdfsdk/src/jsapi/fxjs_v8.cpp',
-          ],
-        }],
-      ],
-    },
-    {
       'target_name': 'formfiller',
       'type': 'static_library',
       'sources': [
@@ -817,10 +745,6 @@
             '<(DEPTH)/v8',
             '<(DEPTH)/v8/include',
           ],
-          'dependencies': [
-            '<(DEPTH)/v8/tools/gyp/v8.gyp:v8',
-            '<(DEPTH)/v8/tools/gyp/v8.gyp:v8_libplatform',
-          ],
           'sources': [
             'fpdfsdk/src/javascript/public_methods_embeddertest.cpp',
             'fpdfsdk/src/jsapi/fxjs_v8_embeddertest.cpp',
@@ -850,10 +774,6 @@
             '<(DEPTH)/v8',
             '<(DEPTH)/v8/include',
           ],
-          'dependencies': [
-            '<(DEPTH)/v8/tools/gyp/v8.gyp:v8',
-            '<(DEPTH)/v8/tools/gyp/v8.gyp:v8_libplatform',
-          ],
         }],
       ],
     },
@@ -865,7 +785,6 @@
           'target_name': 'fpdfxfa',
           'type': 'static_library',
           'dependencies': [
-            'javascript',
             'xfa.gyp:xfa',
           ],
           'sources': [

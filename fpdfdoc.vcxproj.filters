@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\include\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{16178836-FF57-2363-AA2B-8BAC1DC00026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\src\fpdfdoc">
+      <UniqueIdentifier>{96181C07-CA3A-B0C2-67C9-8C1DBFA98551}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\include\fpdfdoc\fpdf_ap.h">
+      <Filter>core\include\fpdfdoc</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fpdfdoc\fpdf_doc.h">
+      <Filter>core\include\fpdfdoc</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fpdfdoc\fpdf_tagged.h">
+      <Filter>core\include\fpdfdoc</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\fpdfdoc\fpdf_vt.h">
+      <Filter>core\include\fpdfdoc</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fpdfdoc\doc_action.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_annot.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_ap.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_basic.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_bookmark.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_form.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_formcontrol.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_formfield.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_link.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_metadata.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_ocg.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_tagged.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_utils.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fpdfdoc\doc_utils.h">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClInclude>
+    <ClCompile Include="core\src\fpdfdoc\doc_viewerPreferences.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_vt.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\fpdfdoc\doc_vtmodule.cpp">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClCompile>
+    <ClInclude Include="core\src\fpdfdoc\pdf_vt.h">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\fpdfdoc\tagged_int.h">
+      <Filter>core\src\fpdfdoc</Filter>
+    </ClInclude>
+    <None Include="pdfium.gyp"/>
+  </ItemGroup>
+</Project>

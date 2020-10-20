@@ -37,10 +37,10 @@ def main():
   # Set the GYP DEPTH variable to the root of the PDFium project.
   args.append('--depth=' + os.path.relpath(pdfium_root))
 
-  # GYP does not default to ninja, but PDFium should.
+  # GYP does not default to msvs, but PDFium should.
   if not os.environ.get('GYP_GENERATORS', ''):
-    print 'GYP_GENERATORS is not set, defaulting to ninja'
-    os.environ['GYP_GENERATORS'] = 'ninja'
+    print 'GYP_GENERATORS is not set, defaulting to msvs'
+    os.environ['GYP_GENERATORS'] = 'msvs'
 
   print 'Updating projects from gyp files...'
   sys.stdout.flush()
