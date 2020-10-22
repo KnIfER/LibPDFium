@@ -10,7 +10,7 @@ declare_args() {
   pdfium_bundle_freetype = !is_linux
 
   # Build PDFium either with or without v8 support.
-  pdf_enable_v8 = true
+  pdf_enable_v8 = false
 
   # Build PDFium either with or without XFA Forms support.
   pdf_enable_xfa = false

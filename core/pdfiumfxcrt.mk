@@ -46,3 +46,15 @@ LOCAL_C_INCLUDES := \
     external/freetype/include/freetype
 
 include $(BUILD_STATIC_LIBRARY)
+
+OBJS_pdfiumfxcrt := $(addsuffix .o, $(LOCAL_SRC_FILES))
+OBJS_pdfiumfxcrt := $(addprefix build/$(_ARCH_PX_)/pdfiumfxcrt/, $(OBJS_pdfiumfxcrt))
+	
+libpdfiumfxcrt.a: $(OBJS_pdfiumfxcrt)
+	$(AR) -rv libpdfiumfxcrt.a $(OBJS_pdfiumfxcrt)
+
+build/$(_ARCH_PX_)/pdfiumfxcrt/%.o: %
+	@echo $<; set -x;\
+	mkdir -p $(dir $@);\
+	$(CC) -c -O3 $< -o $(@) -I"../" -I$(LOCAL_C_INCLUDES)
+	echo

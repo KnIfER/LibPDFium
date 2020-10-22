@@ -118,3 +118,15 @@ LOCAL_C_INCLUDES := \
     external/freetype/include/freetype
 
 include $(BUILD_STATIC_LIBRARY)
+
+OBJS_pdfiumfpdfapi := $(addsuffix .o, $(LOCAL_SRC_FILES))
+OBJS_pdfiumfpdfapi := $(addprefix build/$(_ARCH_PX_)/pdfiumfpdfapi/, $(OBJS_pdfiumfpdfapi))
+	
+libpdfiumfpdfapi.a: $(OBJS_pdfiumfpdfapi)
+	$(AR) -rv libpdfiumfpdfapi.a $(OBJS_pdfiumfpdfapi)
+
+build/$(_ARCH_PX_)/pdfiumfpdfapi/%.o: %
+	@echo $<; set -x;\
+	mkdir -p $(dir $@);\
+	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES)
+	echo

@@ -35,3 +35,15 @@ LOCAL_C_INCLUDES := \
     external/pdfium
 
 include $(BUILD_STATIC_LIBRARY)
+
+OBJS_pdfiumzlib := $(addsuffix .o, $(LOCAL_SRC_FILES))
+OBJS_pdfiumzlib := $(addprefix build/$(_ARCH_PX_)/pdfiumzlib/, $(OBJS_pdfiumzlib))
+	
+libpdfiumzlib.a: $(OBJS_pdfiumzlib)
+	$(AR) -rv libpdfiumzlib.a $(OBJS_pdfiumzlib)
+
+build/$(_ARCH_PX_)/pdfiumzlib/%.o: %
+	@echo $<; set -x;\
+	mkdir -p $(dir $@);\
+	$(CC) -c -O3 $< -o $(@) -I"../" -I$(LOCAL_C_INCLUDES)
+	echo

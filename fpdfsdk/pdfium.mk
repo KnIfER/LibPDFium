@@ -23,7 +23,7 @@ LOCAL_STATIC_LIBRARIES := libpdfiumformfiller \
                           libpdfiumfxge \
                           libpdfiumfxedit \
                           libpdfiumfpdftext \
-                          libpdfiumfxcrt \
+                          libpdfium \
                           libpdfiumfxcodec \
                           libpdfiumfpdfdoc \
                           libpdfiumfdrm \
@@ -62,8 +62,54 @@ LOCAL_SRC_FILES := \
     src/fsdk_rendercontext.cpp
 
 LOCAL_C_INCLUDES := \
-    external/pdfium \
-    external/freetype/include \
-    external/freetype/include/freetype
+    -I../ \
+    -I../../freetype/include \
+    -I../../freetype/include/freetype
 
 include $(BUILD_SHARED_LIBRARY)
+
+SRC_pdfium := $(LOCAL_SRC_FILES)
+OBJS_pdfium := $(addsuffix .o, $(LOCAL_SRC_FILES))
+OBJS_pdfium := $(addprefix build/$(_ARCH_PX_)/pdfium/, $(OBJS_pdfium))
+ALLOBJS += $(OBJS_pdfium)
+	
+libpdfium.a: $(OBJS_pdfium)
+	$(AR) -rv libpdfium.a $(OBJS_pdfium)
+	
+	
+	# libpdfiumpdfwindow.a\
+	# libpdfiumformfiller.a\
+	# libpdfiumfxedit.a\
+	# libpdfiumjavascript.a\
+	
+pdflibs_ := \
+	libpdfiumpdfwindow.a\
+	libpdfiumformfiller.a\
+	libpdfiumfxedit.a\
+	libpdfiumjavascript.a\
+	-Wl,--whole-archive\
+	../third_party/libpdfiumzlib.a\
+	../third_party/libpdfiumagg23.a\
+	../third_party/libpdfiumbigint.a\
+	../third_party/libpdfiumjpeg.a\
+	../third_party/libpdfiumlcms.a\
+	../third_party/libpdfiumopenjpeg.a\
+	../core/libpdfiumfdrm.a\
+	../core/libpdfiumfpdfapi.a\
+	../core/libpdfiumfpdfdoc.a\
+	../core/libpdfiumfpdftext.a\
+	../core/libpdfiumfxcodec.a\
+	../core/libpdfiumfxcrt.a\
+	../core/libpdfiumfxge.a\
+	-Wl,--no-whole-archive
+	
+libpdfium.so: $(LOCAL_SRC_FILES)
+	$(CC) -fPIC -shared -Wl,-soname,libpdfium.so $(SRC_pdfium) -o libpdfium.so $(LOCAL_SRC_FILES) $(pdflibs_) -I"../" $(LOCAL_C_INCLUDES)\
+	
+	echo
+
+build/$(_ARCH_PX_)/pdfium/%.o: %
+	@echo $<; set -x;\
+	mkdir -p $(dir $@);\
+	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES)
+	echo

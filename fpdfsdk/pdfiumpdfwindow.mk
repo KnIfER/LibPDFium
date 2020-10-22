@@ -36,8 +36,21 @@ LOCAL_SRC_FILES := \
     src/pdfwindow/PWL_Wnd.cpp
 
 LOCAL_C_INCLUDES := \
-    external/pdfium \
-    external/freetype/include \
-    external/freetype/include/freetype
+    -I../ \
+    -I../../freetype/include \
+    -I../../freetype/include/freetype
 
 include $(BUILD_STATIC_LIBRARY)
+
+OBJS_pdfiumpdfwindow := $(addsuffix .o, $(LOCAL_SRC_FILES))
+OBJS_pdfiumpdfwindow := $(addprefix build/$(_ARCH_PX_)/pdfiumpdfwindow/, $(OBJS_pdfiumpdfwindow))
+ALLOBJS += $(OBJS_pdfiumpdfwindow)
+	
+libpdfiumpdfwindow.a: $(OBJS_pdfiumpdfwindow)
+	$(AR) -rv libpdfiumpdfwindow.a $(OBJS_pdfiumpdfwindow)
+
+build/$(_ARCH_PX_)/pdfiumpdfwindow/%.o: %
+	@echo $<; set -x;\
+	mkdir -p $(dir $@);\
+	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES)
+	echo

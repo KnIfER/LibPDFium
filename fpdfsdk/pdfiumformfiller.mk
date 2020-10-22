@@ -28,8 +28,21 @@ LOCAL_SRC_FILES := \
     src/formfiller/FFL_TextField.cpp
 
 LOCAL_C_INCLUDES := \
-    external/pdfium \
-    external/freetype/include \
-    external/freetype/include/freetype
+    -I../ \
+    -I../../freetype/include \
+    -I../../freetype/include/freetype
 
 include $(BUILD_STATIC_LIBRARY)
+
+OBJS_pdfiumformfiller := $(addsuffix .o, $(LOCAL_SRC_FILES))
+OBJS_pdfiumformfiller := $(addprefix build/$(_ARCH_PX_)/pdfiumformfiller/, $(OBJS_pdfiumformfiller))
+ALLOBJS += $(OBJS_pdfiumformfiller)
+	
+libpdfiumformfiller.a: $(OBJS_pdfiumformfiller)
+	$(AR) -rv libpdfiumformfiller.a $(OBJS_pdfiumformfiller)
+
+build/$(_ARCH_PX_)/pdfiumformfiller/%.o: %
+	@echo $<; set -x;\
+	mkdir -p $(dir $@);\
+	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES)
+	echo

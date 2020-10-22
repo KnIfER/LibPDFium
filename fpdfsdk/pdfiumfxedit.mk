@@ -24,7 +24,21 @@ LOCAL_SRC_FILES := \
     src/fxedit/fxet_pageobjs.cpp
 
 LOCAL_C_INCLUDES := \
-    external/pdfium \
-    external/freetype/include \
-    external/freetype/include/freetype
+    -I../ \
+    -I../../freetype/include \
+    -I../../freetype/include/freetype
+	
 include $(BUILD_STATIC_LIBRARY)
+
+OBJS_pdfiumfxedit := $(addsuffix .o, $(LOCAL_SRC_FILES))
+OBJS_pdfiumfxedit := $(addprefix build/$(_ARCH_PX_)/pdfiumfxedit/, $(OBJS_pdfiumfxedit))
+ALLOBJS += $(OBJS_pdfiumfxedit)
+	
+libpdfiumfxedit.a: $(OBJS_pdfiumfxedit)
+	$(AR) -rv libpdfiumfxedit.a $(OBJS_pdfiumfxedit)
+
+build/$(_ARCH_PX_)/pdfiumfxedit/%.o: %
+	@echo $<; set -x;\
+	mkdir -p $(dir $@);\
+	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES)
+	echo

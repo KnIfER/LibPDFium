@@ -38,17 +38,7 @@ std::wstring GetPlatformWString(const FPDF_WIDESTRING wstr);
 std::unique_ptr<unsigned short, pdfium::FreeDeleter> GetFPDFWideString(
     const std::wstring& wstr);
 
-#ifdef PDF_ENABLE_V8
-#ifdef V8_USE_EXTERNAL_STARTUP_DATA
-bool InitializeV8ForPDFium(const std::string& exe_path,
-                           const std::string& bin_dir,
-                           v8::StartupData* natives_blob,
-                           v8::StartupData* snapshot_blob,
-                           v8::Platform** platform);
-#else   // V8_USE_EXTERNAL_STARTUP_DATA
-bool InitializeV8ForPDFium(v8::Platform** platform);
-#endif  // V8_USE_EXTERNAL_STARTUP_DATA
-#endif  // PDF_ENABLE_V8
+
 
 class TestLoader {
  public:

@@ -20,8 +20,21 @@ LOCAL_SRC_FILES := \
     src/javascript/JS_Runtime_Stub.cpp
 
 LOCAL_C_INCLUDES := \
-    external/pdfium \
-    external/freetype/include \
-    external/freetype/include/freetype
+    -I../ \
+    -I../../freetype/include \
+    -I../../freetype/include/freetype
 
 include $(BUILD_STATIC_LIBRARY)
+
+OBJS_pdfiumjavascript := $(addsuffix .o, $(LOCAL_SRC_FILES))
+OBJS_pdfiumjavascript := $(addprefix build/$(_ARCH_PX_)/pdfiumjavascript/, $(OBJS_pdfiumjavascript))
+ALLOBJS += $(OBJS_pdfiumjavascript)
+	
+libpdfiumjavascript.a: $(OBJS_pdfiumjavascript)
+	$(AR) -rv libpdfiumjavascript.a $(OBJS_pdfiumjavascript)
+
+build/$(_ARCH_PX_)/pdfiumjavascript/%.o: %
+	@echo $<; set -x;\
+	mkdir -p $(dir $@);\
+	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES)
+	echo
