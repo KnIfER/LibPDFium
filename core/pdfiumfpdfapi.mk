@@ -113,9 +113,9 @@ LOCAL_SRC_FILES := \
     src/fpdfapi/fpdf_render/fpdf_render_text.cpp
 
 LOCAL_C_INCLUDES := \
-    external/pdfium \
-    external/freetype/include \
-    external/freetype/include/freetype
+    -I../ \
+    -I../third_party/freetype/include \
+    -I../third_party/freetype/include/freetype
 
 include $(BUILD_STATIC_LIBRARY)
 

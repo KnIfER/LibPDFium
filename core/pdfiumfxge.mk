@@ -58,9 +58,9 @@ LOCAL_SRC_FILES := \
 	src/fxge/ge/fx_ge_text.cpp
 
 LOCAL_C_INCLUDES := \
-	-I../\
-	-I../../freetype/include \
-	-I../../freetype/include/freetype
+    -I../ \
+    -I../third_party/freetype/include \
+    -I../third_party/freetype/include/freetype
 
 include $(BUILD_STATIC_LIBRARY)
 

@@ -45,9 +45,9 @@ LOCAL_SRC_FILES := \
     src/fxcodec/jbig2/JBig2_TrdProc.cpp
 
 LOCAL_C_INCLUDES := \
-    external/pdfium \
-    external/freetype/include \
-    external/freetype/include/freetype
+    -I../ \
+    -I../third_party/freetype/include \
+    -I../third_party/freetype/include/freetype
 
 include $(BUILD_STATIC_LIBRARY)
 
