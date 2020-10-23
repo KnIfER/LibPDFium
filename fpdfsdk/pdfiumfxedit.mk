@@ -25,8 +25,8 @@ LOCAL_SRC_FILES := \
 
 LOCAL_C_INCLUDES := \
     -I../ \
-    -I../../freetype/include \
-    -I../../freetype/include/freetype
+    -I../freetype/include \
+    -I../freetype/include/freetype
 	
 include $(BUILD_STATIC_LIBRARY)
 

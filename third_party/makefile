@@ -15,6 +15,7 @@ include pdfiumopenjpeg.mk
 include pdfiumbigint.mk
 include pdfiumagg23.mk
 include pdfiumlcms.mk
+include pdfiumfreetype.mk
 
 all: \
 	libpdfiumzlib.a\
@@ -23,5 +24,6 @@ all: \
 	libpdfiumbigint.a\
 	libpdfiumagg23.a\
 	libpdfiumlcms.a\
+	libpdfiumfreetype.a\
 	
 	

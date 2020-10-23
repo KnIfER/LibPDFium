@@ -63,8 +63,8 @@ LOCAL_SRC_FILES := \
 
 LOCAL_C_INCLUDES := \
     -I../ \
-    -I../../freetype/include \
-    -I../../freetype/include/freetype
+    -I../freetype/include \
+    -I../freetype/include/freetype
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -84,16 +84,18 @@ libpdfium.a: $(OBJS_pdfium)
 	
 pdflibs_ := \
 	libpdfiumpdfwindow.a\
+	-Wl,--whole-archive\
 	libpdfiumformfiller.a\
 	libpdfiumfxedit.a\
 	libpdfiumjavascript.a\
-	-Wl,--whole-archive\
+	$(SRC_pdfium)\
 	../third_party/libpdfiumzlib.a\
 	../third_party/libpdfiumagg23.a\
 	../third_party/libpdfiumbigint.a\
 	../third_party/libpdfiumjpeg.a\
 	../third_party/libpdfiumlcms.a\
 	../third_party/libpdfiumopenjpeg.a\
+	../third_party/libpdfiumfreetype.a\
 	../core/libpdfiumfdrm.a\
 	../core/libpdfiumfpdfapi.a\
 	../core/libpdfiumfpdfdoc.a\
@@ -104,7 +106,7 @@ pdflibs_ := \
 	-Wl,--no-whole-archive
 	
 libpdfium.so: $(LOCAL_SRC_FILES)
-	$(CC) -fPIC -shared -Wl,-soname,libpdfium.so $(SRC_pdfium) -o libpdfium.so $(LOCAL_SRC_FILES) $(pdflibs_) -I"../" $(LOCAL_C_INCLUDES)\
+	$(CC)++ -fPIC -shared -Wl,-soname,libpdfium.so -o libpdfium.so $(LOCAL_SRC_FILES) $(pdflibs_) -I"../" $(LOCAL_C_INCLUDES)\
 	
 	echo
 

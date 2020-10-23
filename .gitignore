@@ -4,3 +4,4 @@ Debug
 .vs
 *.o
 *.a
+*.so
