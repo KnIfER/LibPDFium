@@ -14,6 +14,10 @@
 /*  understand and accept it fully.                                        */
 /*                                                                         */
 /***************************************************************************/
+//我的define
+#ifndef FT2_BUILD_LIBRARY
+#define FT2_BUILD_LIBRARY /* nothing */
+#endif
 
 #ifndef __FT_HEADER_H__
 #define __FT_HEADER_H__
