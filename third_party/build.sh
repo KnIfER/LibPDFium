@@ -4,6 +4,7 @@ export PATH=$ANDROID_SDK/tools:$PATH
 
 export NDK=/mnt/d/Code/NVPACK/android-ndk-r21b
 export NDK=/mnt/d/Code/NVPACK/android_sdk/ndk/21.0.6113669
+export NDKW=d:/Code/NVPACK/android_sdk/ndk/21.0.6113669
 
 export PATH=$NDK:$PATH
 

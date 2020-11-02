@@ -89,13 +89,6 @@ pdflibs_ := \
 	libpdfiumfxedit.a\
 	libpdfiumjavascript.a\
 	$(SRC_pdfium)\
-	../third_party/libpdfiumzlib.a\
-	../third_party/libpdfiumagg23.a\
-	../third_party/libpdfiumbigint.a\
-	../third_party/libpdfiumjpeg.a\
-	../third_party/libpdfiumlcms.a\
-	../third_party/libpdfiumopenjpeg.a\
-	../third_party/libpdfiumfreetype.a\
 	../core/libpdfiumfdrm.a\
 	../core/libpdfiumfpdfapi.a\
 	../core/libpdfiumfpdfdoc.a\
@@ -103,7 +96,14 @@ pdflibs_ := \
 	../core/libpdfiumfxcodec.a\
 	../core/libpdfiumfxcrt.a\
 	../core/libpdfiumfxge.a\
-	-Wl,--no-whole-archive
+	-Wl,--no-whole-archive\
+	../third_party/libpdfiumzlib.a\
+	../third_party/libpdfiumagg23.a\
+	../third_party/libpdfiumbigint.a\
+	../third_party/libpdfiumjpeg.a\
+	../third_party/libpdfiumlcms.a\
+	../third_party/libpdfiumopenjpeg.a\
+	../third_party/libpdfiumfreetype.a\
 	
 libpdfium.so: $(LOCAL_SRC_FILES)
 	$(CC)++ -fPIC -shared -Wl,-soname,libpdfium.so -o libpdfium.so $(LOCAL_SRC_FILES) $(pdflibs_) -I"../" $(LOCAL_C_INCLUDES)\
