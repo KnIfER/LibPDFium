@@ -14,30 +14,31 @@ CHROMIUM_DEPS_FILE = "DEPS"
 
 PDFIUM_GIT_REPO = "https://pdfium.googlesource.com/pdfium.git"
 
-MAKE_FILES = ["third_party/pdfiumopenjpeg.mk",
-              "third_party/pdfiumlcms.mk",
-              "third_party/pdfiumjpeg.mk",
-              "third_party/pdfiumagg23.mk",
-              "third_party/pdfiumzlib.mk",
-              "third_party/pdfiumbigint.mk",
-              "third_party/Android.mk",
-              "core/pdfiumfpdftext.mk",
-              "core/pdfiumfpdfdoc.mk",
-              "core/pdfiumfdrm.mk",
-              "core/pdfiumfxcodec.mk",
-              "core/pdfiumfpdfapi.mk",
-              "core/pdfiumfxcrt.mk",
-              "core/pdfiumfxge.mk",
-              "core/Android.mk",
-              "fpdfsdk/pdfiumjavascript.mk",
-              "fpdfsdk/pdfiumformfiller.mk",
-              "fpdfsdk/pdfiumfxedit.mk",
-              "fpdfsdk/pdfiumpdfwindow.mk",
-              "fpdfsdk/pdfium.mk",
-              "fpdfsdk/Android.mk"]
+MAKE_FILES = ["Android.bp",
+              "third_party/pdfiumopenjpeg.bp",
+              "third_party/pdfiumlcms.bp",
+              "third_party/pdfiumjpeg.bp",
+              "third_party/pdfiumagg23.bp",
+              "third_party/pdfiumzlib.bp",
+              "third_party/pdfiumbigint.bp",
+              "third_party/Android.bp",
+              "pdfiumfpdftext.bp",
+              "pdfiumfpdfdoc.bp",
+              "pdfiumfdrm.bp",
+              "pdfiumfxcodec.bp",
+              "pdfiumfpdfapi.bp",
+              "pdfiumfxcrt.bp",
+              "pdfiumfxge.bp",
+              "pdfiumjavascript.bp",
+              "pdfiumformfiller.bp",
+              "pdfiumfxedit.bp",
+              "pdfiumpdfwindow.bp",
+              "pdfium.bp"]
+
+OWNERS_FILES = ["OWNERS", "docs/OWNERS", "third_party/base/numerics/OWNERS"]
 
 COPY_FILES = [os.path.basename(__file__), ".git", "MODULE_LICENSE_BSD", "NOTICE"] + MAKE_FILES
-REMOVE_FILES = [os.path.basename(__file__), ".git", ".gitignore"]
+REMOVE_FILES = [os.path.basename(__file__), ".git", ".gitignore"] + OWNERS_FILES
 
 def getStableChromiumVersion():
    """ :return the latest chromium version """
@@ -124,8 +125,8 @@ if __name__ == "__main__":
        removeFiles(newDir)
        copyFiles(targetDir, newDir)
        exchange(targetDir, newDir, oldDir)
-       print("Updated pdfium to " + rev + ". Old files are in " + oldDir + ". Please verify if "
-             "build files need to be updated.")
+       print("Updated pdfium to " + rev + " (Chrome " + getStableChromiumVersion() + "). Old files "
+             "are in " + oldDir + ". Please verify if build files need to be updated.")
 
        sys.exit(0)
    except:

@@ -48,6 +48,7 @@
 //----------------------------------------------------------------------------
 #include <limits.h>
 #include "agg_rasterizer_scanline_aa.h"
+#include "third_party/base/numerics/safe_math.h"
 namespace agg
 {
 AGG_INLINE void cell_aa::set_cover(int c, int a)
@@ -117,8 +118,8 @@ void outline_aa::allocate_block()
         if(m_num_blocks >= m_max_blocks) {
             cell_aa** new_cells = FX_Alloc( cell_aa*, m_max_blocks + cell_block_pool);
             if(m_cells) {
-                FXSYS_memcpy(new_cells, m_cells, m_max_blocks * sizeof(cell_aa*));
-                FX_Free(m_cells);
+              memcpy(new_cells, m_cells, m_max_blocks * sizeof(cell_aa*));
+              FX_Free(m_cells);
             }
             m_cells = new_cells;
             m_max_blocks += cell_block_pool;
@@ -237,7 +238,7 @@ void outline_aa::render_line(int x1, int y1, int x2, int y2)
     int fy1 = y1 & poly_base_mask;
     int fy2 = y2 & poly_base_mask;
     int x_from, x_to;
-    int p, rem, mod, lift, delta, first, incr;
+    int rem, mod, lift, delta, first, incr;
     if(ey1 == ey2) {
         render_hline(ey1, x1, fy1, x2, fy2);
         return;
@@ -268,16 +269,22 @@ void outline_aa::render_line(int x1, int y1, int x2, int y2)
         m_cur_cell.add_cover(delta, two_fx * delta);
         return;
     }
-    p     = (poly_base_size - fy1) * dx;
+    pdfium::base::CheckedNumeric<int> safeP = poly_base_size - fy1;
+    safeP *= dx;
+    if (!safeP.IsValid())
+      return;
     first = poly_base_size;
     if(dy < 0) {
-        p     = fy1 * dx;
-        first = 0;
-        incr  = -1;
-        dy    = -dy;
+      safeP = fy1;
+      safeP *= dx;
+      if (!safeP.IsValid())
+        return;
+      first = 0;
+      incr = -1;
+      dy = -dy;
     }
-    delta = p / dy;
-    mod   = p % dy;
+    delta = (safeP / dy).ValueOrDie();
+    mod = (safeP % dy).ValueOrDie();
     if(mod < 0) {
         delta--;
         mod += dy;
@@ -287,12 +294,15 @@ void outline_aa::render_line(int x1, int y1, int x2, int y2)
     ey1 += incr;
     set_cur_cell(x_from >> poly_base_shift, ey1);
     if(ey1 != ey2) {
-        p     = poly_base_size * dx;
-        lift  = p / dy;
-        rem   = p % dy;
-        if(rem < 0) {
-            lift--;
-            rem += dy;
+      safeP = static_cast<int>(poly_base_size);
+      safeP *= dx;
+      if (!safeP.IsValid())
+        return;
+      lift = (safeP / dy).ValueOrDie();
+      rem = (safeP % dy).ValueOrDie();
+      if (rem < 0) {
+        lift--;
+        rem += dy;
         }
         mod -= dy;
         while(ey1 != ey2) {
@@ -484,5 +494,24 @@ void outline_aa::sort_cells()
         }
     }
     m_sorted = true;
+}
+// static
+int rasterizer_scanline_aa::calculate_area(int cover, int shift)
+{
+    unsigned int result = cover;
+    result <<= shift;
+    return result;
+}
+// static
+bool rasterizer_scanline_aa::safe_add(int* op1, int op2)
+{
+    pdfium::base::CheckedNumeric<int> safeOp1 = *op1;
+    safeOp1 += op2;
+    if(!safeOp1.IsValid()) {
+        return false;
+    }
+
+    *op1 = safeOp1.ValueOrDie();
+    return true;
 }
 }

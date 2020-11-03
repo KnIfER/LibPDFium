@@ -1,7 +1,0 @@
-gyp
-Release
-Debug
-.vs
-*.o
-*.a
-*.so
