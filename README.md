@@ -24,7 +24,7 @@ Results:
 
 - [A 7](https://github.com/KnIfER/LibPDFium/tree/a7316989543f2f030be7ad57f751fbdb3cf3a77b)
   - 470ms ( built using makefiles, -O3 )
-- [A 11](https://github.com/KnIfER/LibPDFium/commit/cc4de4453cb3f773e603f03b46fbe82653ab53ea)
+- [A 11](https://github.com/KnIfER/LibPDFium/tree/b29471bfd7a2b5b83bc7c1e4889c6fd60bcd4117)
   - 570 ms ( built using makefiles, -O3 )
   - 40000 ms ( built using cmake, default no optimizations )
   - 700 ms ( built using cmake, -Os )
