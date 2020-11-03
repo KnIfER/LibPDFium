@@ -13,7 +13,7 @@
 #ifndef JPEGLIB_H
 #define JPEGLIB_H
 
-#define FOXIT_PREFIX(origName)  FPDFAPIJPEG_##origName
+#define FOXIT_PREFIX(origName) chromium_##origName
 
 #define jcopy_block_row FOXIT_PREFIX(jcopy_block_row)
 #define jcopy_sample_rows FOXIT_PREFIX(jcopy_sample_rows)

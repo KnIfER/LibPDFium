@@ -116,21 +116,35 @@ typedef struct backing_store_struct * backing_store_ptr;
 
 typedef struct backing_store_struct {
   /* Methods for reading/writing/closing this backing-store object */
-  JMETHOD(void, read_backing_store, (j_common_ptr cinfo,
-				     backing_store_ptr info,
-				     void FAR * buffer_address,
-				     long file_offset, long byte_count));
-  JMETHOD(void, write_backing_store, (j_common_ptr cinfo,
-				      backing_store_ptr info,
-				      void FAR * buffer_address,
-				      long file_offset, long byte_count));
-  JMETHOD(void, close_backing_store, (j_common_ptr cinfo,
-				      backing_store_ptr info));
+  void (*read_backing_store)(j_common_ptr cinfo,
+                             backing_store_ptr info,
+                             void* buffer_address,
+                             long file_offset,
+                             long byte_count);
+  void (*write_backing_store)(j_common_ptr cinfo,
+                              backing_store_ptr info,
+                              void* buffer_address,
+                              long file_offset,
+                              long byte_count);
+  void (*close_backing_store)(j_common_ptr cinfo, backing_store_ptr info);
 
   /* Private fields for system-dependent backing-store management */
+#ifdef USE_MSDOS_MEMMGR
+  /* For the MS-DOS manager (jmemdos.c), we need: */
+  handle_union handle; /* reference to backing-store storage object */
+  char temp_name[TEMP_NAME_LENGTH]; /* name if it's a file */
+#else
+#ifdef USE_MAC_MEMMGR
+  /* For the Mac manager (jmemmac.c), we need: */
+  short temp_file;                  /* file reference number to temp file */
+  FSSpec tempSpec;                  /* the FSSpec for the temp file */
+  char temp_name[TEMP_NAME_LENGTH]; /* name if it's a file */
+#else
   /* For a typical implementation with temp files, we need: */
-  FXSYS_FILE * temp_file;		/* stdio reference to temp file */
+  FILE* temp_file;                  /* stdio reference to temp file */
   char temp_name[TEMP_NAME_LENGTH]; /* name of temp file */
+#endif
+#endif
 } backing_store_info;
 
 

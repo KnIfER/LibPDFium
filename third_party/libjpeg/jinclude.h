@@ -20,7 +20,7 @@
 #include "jconfig.h"		/* auto configuration options */
 #define JCONFIG_INCLUDED	/* so that jpeglib.h doesn't do it again */
 
-#include "core/include/fxcrt/fx_system.h"
+#include "core/fxcrt/fx_system.h"
 
 /*
  * We need the NULL macro and size_t typedef.
@@ -76,8 +76,9 @@
 #else /* not BSD, assume ANSI/SysV string lib */
 
 //#include <string.h>
-#define MEMZERO(target,size)	FXSYS_memset((void *)(target), 0, (size_t)(size))
-#define MEMCOPY(dest,src,size)	FXSYS_memcpy((void *)(dest), (const void *)(src), (size_t)(size))
+#define FXSYS_fprintf fprintf
+#define MEMZERO(target,size)	memset((void *)(target), 0, (size_t)(size))
+#define MEMCOPY(dest,src,size)	memcpy((void *)(dest), (const void *)(src), (size_t)(size))
 
 #endif
 
