@@ -195,11 +195,11 @@ typedef int FPDF_OBJECT_TYPE;
 #define FPDF_EXPORT
 #endif  // defined(COMPONENT_BUILD)
 
-#if defined(WIN32) && defined(FPDFSDK_EXPORTS)
-#define FPDF_CALLCONV __stdcall
-#else
+//#if defined(WIN32) && defined(FPDFSDK_EXPORTS)
+//#define FPDF_CALLCONV __stdcall
+//#else
 #define FPDF_CALLCONV
-#endif
+//#endif
 
 // Exported Functions
 #ifdef __cplusplus
