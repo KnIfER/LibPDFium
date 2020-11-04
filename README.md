@@ -8,7 +8,7 @@
 - Or just android studio using cmake. 
 
 ## Building the code
-
+- Pull the full demo project.
 - Run `./build.sh` . Make sure the path in the script is correct.
 - Or compile and use everything with cmake in the android studio .
 
@@ -29,6 +29,9 @@ Results:
   - 40000 ms ( built using cmake, default no optimizations )
   - 700 ms ( built using cmake, -Os )
   - 570 ms ( built using cmake, -O3 )
+  
+- [???]()
+  - 610 ms (built by [prsolucoes/pdfium-lib](https://github.com/prsolucoes/pdfium-lib))
 
 ## Demo Application
 
