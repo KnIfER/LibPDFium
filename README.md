@@ -3,9 +3,9 @@
 
 ## Prerequisites
 
-- Win10 with ubuntu subsystem.
+- Win10 with ubuntu subsystem. [Makefiles](https://github.com/KnIfER/PDFium-Android-Demo/blob/main/LibPdfium/src/main/makefile)
   -  NDK 21.0.6113669
-- Or just android studio using cmake. 
+- Or just android studio using [cmake](https://github.com/KnIfER/PDFium-Android-Demo/blob/main/LibPdfium/src/main/cpp/CMakeLists.txt). 
 
 ## Building the code
 - Pull the full demo project.
